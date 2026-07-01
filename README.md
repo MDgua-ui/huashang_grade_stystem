@@ -38,26 +38,6 @@ npx serve .
 open http://localhost:8080
 ```
 
-## GitHub Pages 部署
-
-1. 在 GitHub 上新建仓库 `huashang_grade_system`，不要勾选初始化 README
-2. 将项目所有文件上传到仓库
-3. 进入 Settings -> Pages，Source 选择 Deploy from a branch，分支选 main，目录选 / (root)，Save
-4. 等待一到两分钟，访问 `https://你的用户名.github.io/huashang_grade_system`
-
-## 文件结构
-
-```
-huashang_grade_system/
-├── index.html          # 主页面
-├── style.css           # 样式表（红金主题）
-├── main.js             # 交互逻辑（统计、排序、图表、搜索、明细）
-├── data.json           # 成绩数据（56 条记录）
-├── README.md           # 项目说明
-├── 推文.html            # 含图表的推广推文
-└── gen_tweet.py        # 推文生成脚本
-```
-
 ## 项目地址
 
 GitHub 仓库：https://github.com/MDgua-ui/huashang_grade_system
