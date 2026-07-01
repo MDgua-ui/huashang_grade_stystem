@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华商创新班综合成绩排名系统</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">计算机前沿技术</div>
+    <h1>综合成绩排行榜</h1>
+    <p>23 本计算机科学与技术（创新实验班）1-2 班 · 共 <span id="totalCount">0</span> 名同学</p>
+    <div class="hero-stats" id="heroStats"></div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="输入姓名或学号查找排名...">
+      <button id="searchBtn">查找</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="podium-section">
+    <h2 class="section-title">三甲领奖台</h2>
+    <div class="podium" id="podium"></div>
+  </div>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h3>综合成绩分布</h3>
+      <div class="chart-wrap"><canvas id="distChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>各项满分达成率</h3>
+      <div class="chart-wrap"><canvas id="fullScoreChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="rank-list-section">
+    <h2 class="section-title">完整排名榜</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="sortable" data-key="排名">排名</th>
+            <th>姓名</th>
+            <th class="sortable" data-key="学号">学号</th>
+            <th class="sortable" data-key="讨论">讨论<br><small>20%</small></th>
+            <th class="sortable" data-key="作业">作业<br><small>30%</small></th>
+            <th class="sortable" data-key="签到">签到<br><small>10%</small></th>
+            <th class="sortable" data-key="课程积分">积分<br><small>20%</small></th>
+            <th class="sortable" data-key="PBL">PBL<br><small>20%</small></th>
+            <th class="sortable active" data-key="综合成绩">总分 ▼</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="detail-section" id="detailSection" style="display:none;">
+    <h2 class="section-title">学生成绩明细</h2>
+    <div class="detail-card" id="detailCard"></div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>GitHub 仓库：<a href="https://github.com/MDgua-ui/huashang_grade_system" target="_blank">github.com/MDgua-ui/huashang_grade_system</a></p>
+  <p>在线演示：<a href="https://MDgua-ui.github.io/huashang_grade_system" target="_blank">MDgua-ui.github.io/huashang_grade_system</a></p>
+  <p>广州华商学院 · 2026 年 7 月</p>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

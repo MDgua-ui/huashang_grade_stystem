@@ -1,1 +1,69 @@
-# huashang_grade_stystem
+# 华商创新班综合成绩排名系统
+
+## 项目简介
+
+本项目是一个纯前端的综合成绩排名系统，服务于广州华商学院计算机科学与技术（创新实验班）《计算机前沿技术》课程的期末设计报告提交。
+
+系统从 Excel 成绩表中提取了 56 名同学的五维成绩数据（讨论、作业、签到、课程积分、PBL），按综合成绩从高到低排列，以红金配色的排行榜形式呈现。
+
+## 功能概览
+
+- Hero 统计区：全班平均分、最高分、90 分以上人数、不及格人数、接近满分人数，五个关键指标一目了然
+- 三甲领奖台：前三名同学的金银铜展示，附带姓名、分数和各模块小分
+- 成绩分布图：柱状图展示五个分数区间的人数分布
+- 满分达成率图：横向柱状图展示讨论、作业、签到、积分和 PBL 各自的满分率
+- 完整排名榜：56 名同学从高到低排列，支持按任意表头排序，支持按姓名或学号搜索
+- 学生明细卡片：点击任意一行展开该同学的详细成绩进度条
+
+## 技术栈
+
+- 纯前端：HTML + CSS + JavaScript，无框架依赖
+- 图表：Chart.js v4.4.0（CDN 引入）
+- 数据：JSON 格式，从 Excel 清洗而来
+- 部署：支持 GitHub Pages 一键部署，或任意静态文件服务器
+
+## 本地运行
+
+```bash
+# 进入项目目录
+cd huashang_grade_system
+
+# 方式一：Python
+python -m http.server 8080
+
+# 方式二：Node.js
+npx serve .
+
+# 浏览器访问
+open http://localhost:8080
+```
+
+## GitHub Pages 部署
+
+1. 在 GitHub 上新建仓库 `huashang_grade_system`，不要勾选初始化 README
+2. 将项目所有文件上传到仓库
+3. 进入 Settings -> Pages，Source 选择 Deploy from a branch，分支选 main，目录选 / (root)，Save
+4. 等待一到两分钟，访问 `https://你的用户名.github.io/huashang_grade_system`
+
+## 文件结构
+
+```
+huashang_grade_system/
+├── index.html          # 主页面
+├── style.css           # 样式表（红金主题）
+├── main.js             # 交互逻辑（统计、排序、图表、搜索、明细）
+├── data.json           # 成绩数据（56 条记录）
+├── README.md           # 项目说明
+├── 推文.html            # 含图表的推广推文
+└── gen_tweet.py        # 推文生成脚本
+```
+
+## 项目地址
+
+GitHub 仓库：https://github.com/MDgua-ui/huashang_grade_system
+
+在线演示：https://MDgua-ui.github.io/huashang_grade_system
+
+## 作者
+
+23 本计算机科学与技术（创新实验班）· 广州华商学院 · 2026 年 7 月
